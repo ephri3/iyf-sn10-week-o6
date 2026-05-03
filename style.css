@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #a8bee6 0%, #7d84b2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.23);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    padding: 12px 24px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5568d3;
+}
+
+.hidden {
+    display: none;
+}
+
+#loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+#error {
+    background: #ffebee;
+    color: #d32f2f;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+#weather {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+#weather h2 {
+    margin-bottom: 12px;
+    color: #333;
+}
+
+#weather p {
+    margin: 8px 0;
+    color: #666;
+    font-size: 18px;
+}
+
+#temp {
+    font-size: 28px !important;
+    font-weight: bold;
+    color: #667eea !important;
+}
+
+/* Forecast container */
+#forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Each forecast card */
+.forecast-day {
+    background: linear-gradient(135deg, #6c8cff, #4a63d8);
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.forecast-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Day text */
+.forecast-day strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Temperature */
+.forecast-day .temp {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Description */
+.forecast-day .desc {
+    font-size: 12px;
+    opacity: 0.9;
+}
